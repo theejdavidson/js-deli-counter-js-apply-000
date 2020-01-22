@@ -1,6 +1,14 @@
-function takeANumber(line, name) {
+//should return 'welcome, you have ticket number _'
+/*function takeANumber(line, name) {
   line.push(name);
   return `Welcome, ${name}. You are number ${line.length} in line.`;
+}*/
+
+var count = 0;
+function takeANumber(line) {
+  count++;
+  line.push(count);
+  return `Welcome, you have ticket number ${count}`;
 }
 
 function nowServing(line) {
@@ -13,7 +21,7 @@ function nowServing(line) {
 }
 
 function currentLine(line) {
-  if(line.length == 0)
+  if(line.length === 0)
     return "The line is currently empty.";
   else {
     var lineString = "";
